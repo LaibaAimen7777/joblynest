@@ -1,0 +1,129 @@
+.chat-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f5f6fa;
+}
+
+.chat-container {
+  width: 70%;
+  max-width: 900px;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Header */
+.chat-header {
+  background: #3a699b;
+  color: white;
+  padding: 0px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Messages box */
+.chat-box {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+}
+
+.no-messages {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+}
+
+/* Message bubbles */
+.message-bubble {
+  max-width: 60%;
+  padding: 10px 15px;
+  margin-bottom: 12px;
+  border-radius: 18px;
+  font-size: 0.95rem;
+  position: relative;
+  display: inline-block;
+  line-height: 1.4;
+}
+
+.message-bubble.sent {
+  align-self: flex-end;
+  background: #3a699b;
+  color: white;
+  border-bottom-right-radius: 6px;
+}
+
+.message-bubble.received {
+  align-self: flex-start;
+  background: #eaeaea;
+  color: #333;
+  border-bottom-left-radius: 6px;
+}
+
+.message-time {
+  display: block;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 4px;
+  text-align: right;
+}
+
+.message-bubble.received .message-time {
+  color: gray;
+}
+
+/* Input */
+.chat-input-container {
+  display: flex;
+  border-top: 1px solid #ddd;
+  padding: 12px 15px;
+  background: #fafafa;
+}
+
+.chat-input {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 10px 15px;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.chat-input:focus {
+  border-color: #3a699b;
+}
+
+.chat-send-btn {
+  background: #3a699b;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  margin-left: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.chat-send-btn:hover {
+  background: #0056b3;
+}
+
+@media (max-width: 500px) {
+  .chat-container {
+  width: 90%;
+}
+
+}

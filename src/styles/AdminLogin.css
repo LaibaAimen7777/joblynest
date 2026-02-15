@@ -1,0 +1,141 @@
+/* Admin Login Specific Styling */
+.admin-page-wrapper {
+    background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .admin-outer-container {
+    background-color: rgba(255, 255, 255, 0.2); /* semi-transparent */
+  padding: 80px;
+  width: 50%;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px); /* optional */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  }
+  
+  .admin-heading {
+    margin-top: -10px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 30px;
+  color:rgb(3, 101, 134);
+  font-style: italic; /* ðŸ‘ˆ italic */
+  font-weight: 600;
+  font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .admin-form-container {
+    background: white;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  max-width: 400px;
+  width: 100%;
+  border: 2px solid rgba(100, 100, 100, 0.2);
+  }
+
+  .admin-form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+  
+  
+  .admin-form-group {
+    display: flex;
+  flex-direction: column;
+  }
+  
+  .admin-form-group label {
+    font-weight: 500;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .admin-form-group input {
+    padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 4px;
+  transition: border 0.3s;
+  }
+  
+  .admin-form-group input:focus {
+    border-color: #3b82f6;
+  outline: none;
+  }
+  
+  .admin-password-input-wrapper {
+    position: relative;
+  display: flex;
+  align-items: center;
+  }
+
+  .admin-password-input-wrapper input{
+    width: 100%;
+  padding-right: 40px;
+  }
+  
+  .admin-password-toggle-icon {
+    position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #666;
+  font-size: 18px;
+  }
+  
+  .admin-form-container button[type="submit"] {
+    width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: rgb(3, 101, 134);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+  }
+  
+  .admin-form-container button[type="submit"]:hover {
+    background-color: #1e4e8c;
+  }
+  
+  .admin-form-container a {
+    color: #036586;
+  font-size: 14px;
+  text-decoration: none;
+  }
+  
+  .admin-form-container a:hover {
+    text-decoration: underline;
+  }
+  
+  .admin-form-message {
+    margin-top: 20px;
+  padding: 12px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: 500;
+  }
+  
+  .admin-form-message.success {
+    background-color: #ebf8ff;
+    color: #2b6cb0;
+  }
+  
+  .admin-form-message.error {
+    background-color: #fee2e2;
+    color: #dc2626;
+  }

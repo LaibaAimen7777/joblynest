@@ -1,0 +1,54 @@
+.app-loader-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+
+  z-index: 9999;
+}
+
+/* Professional Pastel Ring Loader */
+.app-loader-spinner {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+
+  border: 5px solid #5693ef;         /* soft pastel pink */
+  border-right-color: #b6dafa;       /* pastel blue */
+
+  animation: loader-spin 1s ease-in-out infinite;
+}
+
+/* Clean black text + soft blue glow */
+.app-loader-text {
+  margin-top: 16px;
+  font-size: 1rem;
+  font-weight: 650;
+  color: #000;
+
+
+  animation: loader-fade 1.2s ease-in-out infinite alternate;
+}
+
+/* Spin animation */
+@keyframes loader-spin {
+  0% {
+    transform: rotate(0deg);
+    filter: drop-shadow(0 0 4px rgba(142, 203, 255, 0.4));
+  }
+  100% {
+    transform: rotate(360deg);
+    filter: drop-shadow(0 0 6px rgba(109, 158, 123, 0.45));
+  }
+}
+
+/* Soft fade animation */
+@keyframes loader-fade {
+  from { opacity: 0.6; }
+  to { opacity: 1; }
+}

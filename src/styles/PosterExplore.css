@@ -1,0 +1,467 @@
+/* PosterExplore Modern Styling */
+.explore-screen {
+  min-height: 100vh;
+  background: rgb(197, 225, 249);
+  padding: 20px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.poster-explore {
+  max-width: 1200px;
+  margin: 0 auto;
+  background:rgb(222, 237, 250);
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Navbar Styling */
+.explore-navbar {
+  background: white;
+  padding: 24px 32px;
+  border-bottom: 1px solid #969ba57f;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.search-bar {
+  flex: 1;
+  min-width: 300px;
+  padding: 14px 20px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: #f8fafc;
+  transition: all 0.2s ease;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.search-bar::placeholder {
+  color: #9ca3af;
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.filters button {
+  padding: 12px 20px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: white;
+  color: #374151;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filters button:hover {
+  border-color: #667eea;
+  background: #f8fafc;
+}
+
+.remove-filters {
+  background: #ef4444 !important;
+  color: white !important;
+  border-color: #ef4444 !important;
+}
+
+.remove-filters:hover {
+  background: #dc2626 !important;
+  border-color: #dc2626 !important;
+}
+
+/* Filter Modal */
+.filter-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.filter-modal {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.filter-modal h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.filter-modal label {
+  display: block;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.filter-modal select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.filter-modal select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.location-btn {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: white;
+  color: #374151;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 20px;
+}
+
+.location-btn:hover {
+  border-color: #667eea;
+  background: #f0f4ff;
+}
+
+.filter-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.filter-actions button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-actions button:first-child {
+  background: #667eea;
+  color: white;
+}
+
+.filter-actions button:first-child:hover {
+  background: #5a6fd8;
+}
+
+.filter-actions button:last-child {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.filter-actions button:last-child:hover {
+  background: #e5e7eb;
+}
+
+/* Seeker List */
+.seeker-list {
+  padding: 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+.seeker-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.seeker-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: #667eea;
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border: 3px solid #f3f4f6;
+}
+
+.seeker-info {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.seeker-info h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.location {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.location::before {
+  content: "📍";
+  font-size: 0.8rem;
+}
+
+.pay-rate {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #059669;
+  margin-bottom: 0;
+}
+
+.show-more {
+  width: 100%;
+  padding: 12px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: auto;
+}
+
+.show-more:hover {
+  background: #5a6fd8;
+  transform: translateY(-1px);
+}
+
+/* Empty State */
+.seeker-list:empty::before {
+  content: "No seekers found matching your criteria";
+  text-align: center;
+  color: #6b7280;
+  font-size: 1.1rem;
+  padding: 60px 20px;
+  grid-column: 1 / -1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .explore-screen {
+    padding: 10px;
+  }
+  
+  .poster-explore {
+    border-radius: 12px;
+  }
+  
+  .explore-navbar {
+    padding: 20px;
+    gap: 16px;
+  }
+  
+  .search-bar {
+    min-width: 100%;
+    order: 1;
+  }
+  
+  .filters {
+    order: 2;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .filters button {
+    flex: 1;
+  }
+  
+  .seeker-list {
+    padding: 20px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .filter-modal {
+    padding: 24px;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .explore-navbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filters {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .seeker-card {
+    padding: 20px;
+  }
+}
+
+/* Loading State */
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Category Badge */
+.category-badge {
+  display: inline-block;
+  background: #f0f4ff;
+  color: #667eea;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Rating Stars */
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.rating span {
+  color: #fbbf24;
+  font-size: 1rem;
+}
+
+.rating-count {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-left: 6px;
+}
+
+.seeker-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.seeker-stars .star-icon {
+  font-size: 14px;
+}
+
+.seeker-rating-text {
+  font-size: 13px;
+  color: #4b5563;
+}
+
+/* Add these styles to your PosterExplore.css file */
+
+/* Rating Row Container */
+.seeker-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  margin-bottom: 8px;
+}
+
+/* Star Icons Container */
+.seeker-stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* Individual Star Icon Styling */
+.seeker-stars .star-icon {
+  color: #fbbf24; /* Gold color for stars */
+  font-size: 14px;
+}
+
+/* Rating Text (e.g., "4.5 / 5 (3 reviews)") */
+.seeker-rating-text {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Optional: Add hover effect to the rating row */
+.seeker-rating-row:hover .star-icon {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+/* Ensure the seeker-info container has proper spacing */
+.seeker-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.seeker-info h3 {
+  margin: 0;
+  margin-bottom: 4px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Make sure the location and pay-rate have proper spacing */
+.seeker-info .location {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 4px 0;
+}
+
+.seeker-info .pay-rate {
+  font-size: 15px;
+  font-weight: 600;
+  color: #059669;
+  margin: 4px 0;
+}

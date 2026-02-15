@@ -1,0 +1,224 @@
+/* SeekerNotifications.css - Modernized Styling */
+
+.seeker-notifications-container {
+  width: 90%;
+  width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  min-height: 100vh;
+  /* Glassmorphism effect */
+  background: rgba(255, 255, 255, 0.15); /* semi-transparent white */
+  border-radius: 30px;
+  backdrop-filter: blur(15px); /* blur behind */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* subtle border */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+
+  /* optional smooth transition for hover effects */
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 500px){
+  .seeker-notifications-container {
+    margin-top: 62px;
+    margin-left: 10px;
+  }
+}
+.seeker-notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.seeker-notifications-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.seeker-notifications-count {
+  background: linear-gradient(90deg, #4299e1, #2b6cb0);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(66, 153, 225, 0.3);
+  min-width: 50px;
+  text-align: center;
+}
+
+.seeker-notifications-header button {
+  background: #4299e1;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 6px rgba(66, 153, 225, 0.3);
+}
+
+.seeker-notifications-header button:hover {
+  background: #2b6cb0;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(66, 153, 225, 0.4);
+}
+
+/* Empty state */
+.seeker-notifications-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.seeker-notifications-empty:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.seeker-notifications-empty-icon {
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  color: #4299e1;
+  opacity: 0.8;
+}
+
+.seeker-notifications-empty h3 {
+  font-size: 1.75rem;
+  color: #334155;
+  margin: 0 0 0.5rem 0;
+}
+
+.seeker-notifications-empty p {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+/* Notification List */
+.seeker-notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Individual notification card */
+.seeker-notification-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 1.5rem 1.75rem;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border-left: 6px solid transparent;
+  cursor: pointer;
+}
+
+.seeker-notification-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+}
+
+.seekernotif-unread {
+  border-left-color: #4299e1;
+  background: linear-gradient(to right, #ebf8ff, #ffffff 10%);
+}
+
+.seekernotif-read {
+  background: #f8fafc;
+}
+
+/* Icon */
+.seekernotif-icon {
+  font-size: 1.75rem;
+  margin-right: 1rem;
+  flex-shrink: 0;
+  background: #e0e7ff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2b6cb0;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Content */
+.seekernotif-content {
+  flex: 1;
+}
+
+.seekernotif-message {
+  margin: 0 0 0.5rem 0;
+  color: #1e293b;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.seekernotif-meta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.seekernotif-time,
+.seekernotif-date {
+  font-weight: 400;
+}
+
+/* Badge for unread */
+.seekernotif-badge {
+  background: linear-gradient(90deg, #4299e1, #2b6cb0);
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(66, 153, 225, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .seeker-notifications-container {
+    padding: 1.5rem 1rem;
+  }
+  
+  .seeker-notifications-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .seeker-notification-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.25rem 1.5rem;
+  }
+  
+  .seekernotif-meta {
+    flex-direction: column;
+    gap: 0.25rem;
+    align-items: flex-start;
+  }
+  
+  .seekernotif-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+  }
+}

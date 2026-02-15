@@ -1,0 +1,84 @@
+/* ðŸ”¹ Background Wrapper */
+.auth-page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* was min-height */
+    padding: 0 20px; /* reduced vertical padding to 0 */
+    background: url('1.png') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden; /* âœ… disables scrollbar */
+  }
+  
+  
+  /* ðŸ”¹ Auth Container Box */
+  .auth-options-container {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 24px;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  /* ðŸ”¹ App Title */
+  .auth-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: rgb(3, 101, 134);
+    font-weight: 700;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* ðŸ”¹ Shared Auth Button */
+  .auth-button {
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    border-radius: 999px;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto 16px;
+    max-width: 350px;
+    border: 2px solid black;
+    background-color: darkslategray;
+    color: white;
+  }
+  
+  /* ðŸ”¹ Hover for All Auth Buttons */
+  .auth-button:hover {
+    background-color: rgb(3, 101, 134);
+    color: white;
+  }
+  .auth-button:hover,
+.auth-button:focus,
+.auth-button:active {
+  background-color: rgb(3, 101, 134) !important;
+  color: white !important;
+  outline: none;
+  box-shadow: none;
+}
+
+  /* ðŸ”¹ Terms Text */
+  .auth-terms {
+    font-size: 13px;
+    color: black;
+    margin-top: 24px;
+  }
+  
+  .auth-terms a {
+    color: #059669;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .auth-terms a:hover {
+    text-decoration: underline;
+  }
+  

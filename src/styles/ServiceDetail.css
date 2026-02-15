@@ -1,0 +1,380 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(135deg, #e2ebf0 0%, #f9f9f9 100%);
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    background-color: rgb(220, 243, 250);
+}
+.sub-dropdown-content span {
+    cursor: pointer;
+  }
+  
+
+.service-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+.service-detail img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 40px; /* More space below image */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 100px;
+}
+
+.service-detail h1 {
+    font-size: 2rem;
+    margin-bottom: 20px; /* More space below heading */
+    color: #2c3e50;
+    text-align: center;
+}
+
+.service-detail .underline {
+    width: 80px;
+    height: 4px;
+    background-color: #3498db;
+    margin: 10px auto 30px;
+    border-radius: 5px;
+}
+
+.service-detail p {
+    max-width: 1000px;
+    font-size: 1.3rem;
+    color:black;
+    margin-bottom: 30px; /* More space below paragraph */
+    text-align: center;
+    padding: 0 20px;
+    line-height: 1.8; /* Easier reading */
+}
+
+
+
+.book-now-button {
+    display: inline-block;
+    margin-top: 60px;
+    margin-left: 30px;
+    padding: 18px 50px;
+    font-size: 16px;
+    background-color: rgb(3, 101, 134);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: flex-start; /* ðŸ”¥ FIX for flex parent */
+}
+
+
+.book-now-button:hover {
+    background-color: #0056b3;
+}
+
+/* Additional or updated CSS for better layout */
+
+.service-detail-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    padding: 40px 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.service-image img {
+    margin-top: 120px;
+    width: 100%;
+    max-width: 500px;
+    height: 480px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-info {
+    flex: 1 1 400px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-info h1 {
+    font-size: 2rem;
+    color: rgb(3, 101, 134);
+    margin-top: 30px;
+    
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.service-info .underline {
+    width: 80%;
+    height: 4px;
+    background-color:black;
+    margin: 0 0 25px 0;
+    border-radius: 5px;
+}
+
+.service-info .price-tag {
+    display: inline-block;
+    background: rgb(8, 156, 8);
+    color: white;
+    padding: 12px 28px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    width: fit-content;
+}
+
+
+.service-description {
+    font-size: 20px;
+    color: black;
+    margin-bottom: 40px;
+    text-align: left;
+    line-height: 1.8;
+}
+
+.service-info h3 {
+    font-size: 27px;
+    margin-bottom: 20px;
+    color: black;
+}
+.service-includes {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 400px; /* ðŸ”¥ fix the width of the whole list */
+}
+
+.service-includes li {
+    width: 100%; /* ðŸ”¥ each oval fills 100% of the ul width */
+    background-color: lightblue;
+    border: 2px solid #2c3e50;
+    color: black;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* ðŸ‘‡ When 'show' class is added during scroll */
+.service-includes li.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+.service-includes li:nth-child(1) {
+    transition-delay: 0.2s;
+}
+.service-includes li:nth-child(2) {
+    transition-delay: 0.6s;
+}
+.service-includes li:nth-child(3) {
+    transition-delay: 0.9s;
+}
+.service-includes li:nth-child(4) {
+    transition-delay: 1.2s;
+}
+.service-includes li:nth-child(5) {
+    transition-delay: 1.4s;
+}
+.service-includes li:nth-child(6) {
+    transition-delay: 1.6s;
+}
+.service-includes li:nth-child(7) {
+    transition-delay: 1.6s;
+}
+
+.your-journey-section {
+    text-align: center;
+    margin-top: 30px;
+    padding: 50px 20px;
+    margin-bottom: 30px;
+}
+
+.your-journey-section h2 {
+    font-size: 2rem;
+    margin-bottom: 80px;
+    color:  rgb(3, 101, 134);
+}
+
+.journey-steps {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 80px; /* ðŸ”¥ Increased space between boxes */
+}
+
+.journey-step {
+    position: relative;
+    background: white;
+    width: 240px; /* ðŸŸ° Wider box */
+    min-height: 200px; /* ðŸŸ° Taller box */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px; /* ðŸŸ° comfortable inside padding */
+    text-align: center;
+}
+
+.journey-step::before {
+    content: attr(data-step);
+    font-family: cursive;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background-color:rgb(8, 156, 8);;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-icon {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+
+.journey-step h3 {
+    font-size: 1.4rem;
+    color:black;
+    margin-bottom: 10px;
+}
+
+.journey-step p {
+    font-size: 1rem;
+    color: #555;
+    padding: 0 10px;
+}
+
+/* ------FOOTER */
+.footer {
+    background-color: #d6cfc7; /* Grey-brown */
+    padding: 40px 20px 20px;
+    margin-top: 60px;
+    font-family: 'Poppins', sans-serif;
+    border-top: 2px solid #5c504b;
+    flex-shrink: 0; /* Prevent footer from collapsing */
+}
+
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1 1 300px;
+    min-width: 250px;
+    margin: 20px 10px;
+}
+
+.footer-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-section p {
+    font-size: 0.95rem;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1.5;
+}
+
+.footer-section a {
+    font-size: 0.95rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #5c504b;
+    text-decoration: underline;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px; /* ðŸ”¥ adds vertical space between Home, Dashboard, Services */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.85rem;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #bbb;
+}
+.footer-section svg {
+    color: black; /* ðŸ”¥ all icons black */
+    font-size: 1.2rem; 
+    margin-right: 8px;
+}
+
+
+.page-wrapper {
+    min-height: 100vh; /* Whole page at least screen height */
+    display: flex;
+    flex-direction: column;
+}
+
+.service-detail-container {
+    flex: 1; /* ðŸ”¥ This will stretch the main content and push footer to bottom */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    padding: 40px 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+

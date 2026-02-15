@@ -1,0 +1,71 @@
+/* ---- Make wrapper occupy the full dashboard area & REMOVE scrollbar ---- */
+.big-profile-wrapper.fallback-mode {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;             /* completely hides scrollbar */
+}
+
+/* ensure all scrollbar styling is removed */
+.big-profile-wrapper.fallback-mode::-webkit-scrollbar {
+  display: none !important;
+}
+.big-profile-wrapper.fallback-mode {
+  -ms-overflow-style: none;     /* IE/Edge */
+  scrollbar-width: none;        /* Firefox */
+}
+
+/* ---- Full-width fallback area inside the content panel ---- */
+.fallback-full-bleed {
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  padding: clamp(24px, 4vw, 64px);
+
+  /* much lighter background */
+  background: linear-gradient(135deg, rgba(224,247,250,0.4), rgba(241,248,255,0.4));
+}
+
+/* Centered message, transparent glass-like card */
+.fallback-content {
+  width: 810px;
+  text-align: center;
+  padding: clamp(24px, 3vw, 48px);
+  background: rgba(255,255,255,0);   /* more transparent */
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08); /* lighter shadow */
+  backdrop-filter: blur(6px);            /* subtle glass effect */
+}
+
+.fallback-content h2 {
+  margin: 0 0 12px;
+  font-size: clamp(15px, 3vw, 34px);
+  color: #0a3c4f;
+  font-weight: 700;
+}
+
+.fallback-content p {
+  margin: 0 0 24px;
+  color: rgba(68, 87, 112, 0.9);
+  font-size: clamp(14px, 1.2vw, 18px);
+}
+
+.fallback-content button {
+  background: rgba(3,101,134,0.85);   /* slightly see-through */
+  color: #fff;
+  border: 0;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform .2s, box-shadow .2s, background .2s;
+}
+
+.fallback-content button:hover {
+  background: rgba(2,73,94,0.95);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.18);
+}

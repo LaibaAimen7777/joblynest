@@ -1,0 +1,307 @@
+/* PosterNotifications.css - Modern Styling for Poster Notifications */
+
+.poster-notifications-container {
+  width: 970px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  /* background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); */
+  /* min-height: 100vh; */
+    background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(8, 20, 40, 0.12);
+  height: 470px;
+}
+
+.poster-notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.poster-notifications-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.poster-notifications-count {
+  background-color: #6366f1;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-left: 15px;
+}
+
+.poster-notifications-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  text-align: center;
+  color: #64748b;
+}
+
+.poster-loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e2e8f0;
+  border-top: 4px solid #6366f1;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.poster-notifications-empty {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.poster-notifications-empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.7;
+}
+
+.poster-notifications-empty h3 {
+  font-size: 1.5rem;
+  color: #374151;
+  margin: 0 0 0.5rem 0;
+}
+
+.poster-notifications-empty p {
+  color: #6b7280;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.poster-notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+    max-height: 340px; /* 👈 keeps the list inside the container */
+  overflow-y: auto;  /* 👈 makes it scrollable */
+  padding-right: 6px;
+}
+
+/* Optional: nice custom scrollbar styling */
+.poster-notifications-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.poster-notifications-list::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 10px;
+}
+
+.poster-notifications-list::-webkit-scrollbar-thumb {
+  background: #70aab9;
+  border-radius: 6px;
+}
+
+.poster-notifications-list::-webkit-scrollbar-thumb:hover {
+  background: #53909f;
+}
+
+.poster-notification-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.poster-notification-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.posternotif-unread {
+  border-left-color: #6366f1;
+  background: linear-gradient(to right, #eef2ff 0%, white 10%);
+}
+
+.posternotif-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  flex-shrink: 0;
+  background: #f1f5f9;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.posternotif-content {
+  flex: 1;
+}
+
+.posternotif-message {
+  margin: 0 0 0.75rem 0;
+  color: #1e293b;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.posternotif-meta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.posternotif-time {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.posternotif-date {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.posternotif-actions {
+  margin-left: 1rem;
+  flex-shrink: 0;
+}
+
+.posternotif-badge {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(99, 102, 241, 0.3);
+}
+
+/* Toast customization */
+.Toastify__toast {
+  border-radius: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+.Toastify__toast-body {
+  color: #1e293b;
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+  .poster-notifications-container {
+    padding: 1.5rem 1rem;
+  }
+  
+  .poster-notifications-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
+
+  .poster-notifications-header > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+    .poster-mark-all-btn {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  
+  .poster-notifications-title {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  
+  .poster-notifications-count {
+    align-self: center;
+    margin-left: 0;
+  }
+  
+  .poster-notification-item {
+    padding: 1.25rem;
+    flex-direction: column;
+  }
+  
+  .posternotif-icon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .posternotif-meta {
+    flex-direction: column;
+    gap: 0.25rem;
+    align-items: flex-start;
+  }
+  
+  .posternotif-actions {
+    margin-left: 0;
+    margin-top: 1rem;
+    align-self: flex-end;
+  }
+
+    .close-notif-btn {
+    align-self: flex-end;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: #333 !important;
+  }
+}
+
+/* Mark all as read button */
+.poster-mark-all-btn {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: white;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.poster-mark-all-btn:hover {
+  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.4);
+}
+
+.poster-mark-all-btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 3px 8px rgba(79, 70, 229, 0.3);
+}
+
+.poster-mark-all-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.5);
+}

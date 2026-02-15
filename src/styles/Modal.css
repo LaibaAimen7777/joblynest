@@ -1,0 +1,134 @@
+/* Full-screen overlay with subtle blur */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background: rgba(9, 18, 44, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+}
+
+/* Card */
+.modal-card {
+  position: relative;
+  width: min(420px, 100%);
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 32px 28px 24px;
+  box-shadow: 0 25px 70px rgba(15, 23, 42, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: modalFadeIn 0.25s ease-in-out;
+}
+
+/* Close button */
+.modal-close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+  color: #556070;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  transition: color 0.2s ease;
+}
+
+.modal-close-button:hover {
+  color: #1f2937;
+}
+
+/* Icon */
+.modal-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+/* Body */
+.modal-body h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  color: #0f172a;
+}
+
+.modal-body p {
+  margin: 8px 0 0;
+  font-size: 0.98rem;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+/* Actions */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-actions .allow-btn {
+  min-width: 110px;
+  border-radius: 999px;
+  border: none;
+  padding: 10px 18px;
+  font-weight: 600;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.modal-actions .allow-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.15);
+}
+
+/* Variants */
+.modal-success .modal-icon {
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+}
+
+.modal-success .modal-actions .allow-btn {
+  background: #16a34a;
+  color: #ffffff;
+}
+
+.modal-error .modal-icon,
+.modal-warning .modal-icon {
+  background: linear-gradient(135deg, #dc2626, #f97316);
+}
+
+.modal-error .modal-actions .allow-btn,
+.modal-warning .modal-actions .allow-btn {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.modal-info .modal-icon {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+}
+
+.modal-info .modal-actions .allow-btn {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
